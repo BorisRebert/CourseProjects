@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <browser name = "Chrome">
+        <user role = "admin">
+            <login>administrator</login>
+            <password>1111</password>
+            <test>check role</test>
+            <test>check admin panel</test>
+        </user>
+        <user role = "editor">
+            <login>user1</login>
+            <password>2222</password>
+            <test>check login</test>
+        </user>
+    </browser>
+    <browser name = "Firefox">
+        <user role = "admin">
+            <login>administrator</login>
+            <password>3333</password>
+            <test>check role</test>
+            <test>check admin panel</test>
+        </user>
+        <user role = "editor">
+            <login>user1</login>
+            <password>4444</password>
+            <test>check login</test>
+        </user>
+    </browser>
+    <browser name = "Edge">
+        <user role = "admin">
+            <login>administrator</login>
+            <password>5555</password>
+            <test>check admin panel</test>
+        </user>
+        <user role = "editor">
+            <login>user1</login>
+            <password>6666</password>
+        </user>
+    </browser>
+    <browser name = "Safari">
+        <user role = "admin">
+            <login>administrator</login>
+            <password>5555</password>
+            <test>check role</test>
+            <test>check admin panel</test>
+            <test>check login</test>
+        </user>
+        <user role = "editor">
+            <login>user1</login>
+            <test>check role</test>
+        </user>
+    </browser>
+</config>
