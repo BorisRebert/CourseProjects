@@ -1,4 +1,5 @@
 ﻿using ConfigTestsProject.ConfigSettings;
+using ConfigTestsProject.Models;
 
 namespace ConfigTestsProject
 {
@@ -6,19 +7,19 @@ namespace ConfigTestsProject
     {
         public static void Main(string[] args)
         {
-            XmlConfig xmlConfig = new XmlConfig();
-            JsonConfig jsonConfig = new JsonConfig();
-            
-            IConfig reader = new XmlConfig();
-            var browsers = reader.GetBrowsersWithConfiguration();
+            IRepository reader = new XmlProvider();
+            Config config = reader.GetConfig();
 
-            var incorrectBrowsers = xmlConfig.GetIncorrectConfigurationBrowsers(browsers);
-
-            IConfig writer = new JsonConfig();
-            writer.PrintBrowsersConfiguration(browsers);
-            xmlConfig.PrintNamesIncorrectConfigurationBrowsers(incorrectBrowsers);
+            IRepository writer = new JsonProvider();
+            writer.WriteConfig(config);
             
-            jsonConfig.SerializationBrowsersConfiguration(browsers);
+            ConfigHelper configHelper = new ConfigHelper();
+            JsonProvider jsonProvider = new JsonProvider();
+            
+            var incorrectBrowsers = configHelper.GetBrowsersWithIncorrectConfiguration(config.Browsers);
+            
+            jsonProvider.SetBrowsersConfigurationInJson(config.Browsers);
+            jsonProvider.GetBrowsersWithConfiguration();
         }
     }
 }
