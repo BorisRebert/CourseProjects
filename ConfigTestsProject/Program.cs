@@ -8,6 +8,7 @@ namespace ConfigTestsProject
         {
             XmlConfig xmlConfig = new XmlConfig();
             JsonConfig jsonConfig = new JsonConfig();
+            
             IConfig reader = new XmlConfig();
             var browsers = reader.GetBrowsersWithConfiguration();
 

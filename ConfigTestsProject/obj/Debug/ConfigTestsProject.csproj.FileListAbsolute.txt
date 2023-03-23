@@ -17,6 +17,7 @@ C:\Projects\CourseProjects\ConfigTestsProject\obj\Debug\ConfigTestsProject.cspro
 C:\Projects\CourseProjects\ConfigTestsProject\obj\Debug\ConfigTestsProject.csproj.CopyComplete
 C:\Projects\CourseProjects\ConfigTestsProject\obj\Debug\ConfigTestsProject.exe
 C:\Projects\CourseProjects\ConfigTestsProject\obj\Debug\ConfigTestsProject.pdb
+C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Text.Json.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Buffers.dll
@@ -24,6 +25,5 @@ C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Memory.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Numerics.Vectors.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Text.Encodings.Web.dll
-C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Text.Json.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Projects\CourseProjects\ConfigTestsProject\bin\Debug\System.ValueTuple.dll
