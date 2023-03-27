@@ -1,0 +1,1 @@
+{"Name":"Safari","Users":[{"Role":"admin","Login":"administrator","Password":"5555","Tests":[{"Test":"check role"},{"Test":"check admin panel"},{"Test":"check login"}]},{"Role":"editor","Login":"user1","Password":"password","Tests":[{"Test":"check role"}]}]}

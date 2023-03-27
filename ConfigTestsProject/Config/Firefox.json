@@ -1,0 +1,1 @@
+{"Name":"Firefox","Users":[{"Role":"admin","Login":"administrator","Password":"3333","Tests":[{"Test":"check role"},{"Test":"check admin panel"}]},{"Role":"editor","Login":"user1","Password":"4444","Tests":[{"Test":"check login"}]}]}
