@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace ConfigTestsProject.Models
 {
@@ -18,21 +20,28 @@ namespace ConfigTestsProject.Models
             }
             set
             {
-                if (value == null)
+                if (IsPasswordValidate(value))
                 {
-                    password = "password";
+                    password = value;
                 }
                 else
                 {
-                    password = value;
+                    throw new ArgumentException("Password is not correct");
                 }
             }
         }
 
         public List<TestData> Tests { get; set; }
-        
+
         public User(){}
 
-        public override string ToString() => $"{Role}: login = {Login}, password = {Password} {string.Join(", ", Tests)}";
+        private bool IsPasswordValidate(string value)
+        {
+            var pattern = @"(?=.*[0-9]{2,})(?=.*[+]{0,})(?=.*[_]{0,})(?=.*[a-z]{0,})(?=.*[A-Z]{1,})";
+
+            return Regex.IsMatch(value, pattern);
+        }
+
+        public override string ToString() => $"{Role}: login = {Login}, password = {Password} {string.Join(" ", Tests)}";
     }
 }

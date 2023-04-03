@@ -1,1 +1,1 @@
-{"Name":"Safari","Users":[{"Role":"admin","Login":"administrator","Password":"5555","Tests":[{"Test":"check role"},{"Test":"check admin panel"},{"Test":"check login"}]},{"Role":"editor","Login":"user1","Password":"password","Tests":[{"Test":"check role"}]}]}
+{"Name":"Safari","Users":[{"Role":"admin","Login":"administrator","Password":"As122\u002B_","Tests":[{"Test":"test_0005.006"},{"Test":"test_0005.006"},{"Test":"test_0005.006"}]},{"Role":"editor","Login":"user1","Password":"As122\u002B_","Tests":[{"Test":"test_0005.006"}]}]}

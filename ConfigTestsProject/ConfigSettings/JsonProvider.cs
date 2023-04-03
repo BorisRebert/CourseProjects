@@ -39,9 +39,9 @@ namespace ConfigTestsProject
         {
             foreach (var browser in browsers)
             {
-                using (FileStream fs = new FileStream(@$"{PathHelper.GetPathToProjectFolder()}\Config\{browser.Name}.json", FileMode.OpenOrCreate))
+                using (FileStream fs = new FileStream(@$"{PathHelper.GetPathToProjectFolder()}\Config\{browser.Name}.json", FileMode.Create))
                 {
-                    JsonSerializer.SerializeAsync<Browser>(fs, browser);
+                    JsonSerializer.Serialize<Browser>(fs, browser);
                 }
             }
         }
