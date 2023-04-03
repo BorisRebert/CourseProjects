@@ -1,1 +1,1 @@
-{"Name":"Chrome","Users":[{"Role":"admin","Login":"administrator","Password":"1111","Tests":[{"Test":"check role"},{"Test":"check admin panel"}]},{"Role":"editor","Login":"user1","Password":"2222","Tests":[{"Test":"check login"}]}]}
+{"Name":"Chrome","Users":[{"Role":"admin","Login":"administrator","Password":"Password12\u002B_","Tests":[{"Test":"TEst_0034.001"},{"Test":"test_0005.006"}]},{"Role":"editor","Login":"user1","Password":"Password12\u002B_","Tests":[{"Test":"test_0034.001"}]}]}

@@ -1,1 +1,1 @@
-{"Name":"Firefox","Users":[{"Role":"admin","Login":"administrator","Password":"3333","Tests":[{"Test":"check role"},{"Test":"check admin panel"}]},{"Role":"editor","Login":"user1","Password":"4444","Tests":[{"Test":"check login"}]}]}
+{"Name":"Firefox","Users":[{"Role":"admin","Login":"administrator","Password":"As122\u002B_","Tests":[{"Test":"test_0005.006"},{"Test":"test_0005.006"}]},{"Role":"editor","Login":"user1","Password":"As122\u002B_","Tests":[{"Test":"test_0005.006"}]}]}

@@ -3,51 +3,52 @@
     <browser name = "Chrome">
         <user role = "admin">
             <login>administrator</login>
-            <password>1111</password>
-            <test>check role</test>
-            <test>check admin panel</test>
+            <password>Password12+_</password>
+            <test>TEst_34.1</test>
+            <test>test_5.6</test>
         </user>
         <user role = "editor">
             <login>user1</login>
-            <password>2222</password>
-            <test>check login</test>
+            <password>Password12+_</password>
+            <test>test_0034.001</test>
         </user>
     </browser>
     <browser name = "Firefox">
         <user role = "admin">
             <login>administrator</login>
-            <password>3333</password>
-            <test>check role</test>
-            <test>check admin panel</test>
+            <password>As122+_</password>
+            <test>test_5.6</test>
+            <test>test_5.6</test>
         </user>
         <user role = "editor">
             <login>user1</login>
-            <password>4444</password>
-            <test>check login</test>
+            <password>As122+_</password>
+            <test>test_5.6</test>
         </user>
     </browser>
     <browser name = "Edge">
         <user role = "admin">
             <login>administrator</login>
-            <password>5555</password>
-            <test>check admin panel</test>
+            <password>As122+_</password>
+            <test>test_5.6</test>
         </user>
         <user role = "editor">
             <login>user1</login>
-            <password>6666</password>
+            <password>Aas122+_</password>
         </user>
     </browser>
     <browser name = "Safari">
         <user role = "admin">
             <login>administrator</login>
-            <password>5555</password>
-            <test>check role</test>
-            <test>check admin panel</test>
-            <test>check login</test>
+            <password>As122+_</password>
+            <test>test_5.6</test>
+            <test>test_5.6</test>
+            <test>test_5.6</test>
         </user>
         <user role = "editor">
             <login>user1</login>
-            <test>check role</test>
+            <test>test_5.6</test>
+            <password>As122+_</password>
         </user>
     </browser>
 </config>
