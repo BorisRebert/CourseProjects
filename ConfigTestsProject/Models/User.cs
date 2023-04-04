@@ -37,7 +37,7 @@ namespace ConfigTestsProject.Models
 
         private bool IsPasswordValidate(string value)
         {
-            var pattern = @"(?=.*[0-9]{2,})(?=.*[+]{0,})(?=.*[_]{0,})(?=.*[a-z]{0,})(?=.*[A-Z]{1,})";
+            var pattern = @"^(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d_+]+$";
 
             return Regex.IsMatch(value, pattern);
         }
