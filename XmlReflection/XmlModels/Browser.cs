@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ConfigTestsProject.Models
+namespace XmlReflection.XmlModels
 {
     public class Browser
     {

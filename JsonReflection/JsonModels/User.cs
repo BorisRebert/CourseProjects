@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace ConfigTestsProject.Models
+namespace JsonReflection.JsonModels
 {
     public class User
     {

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ConfigTestsProject.Models;
+using Browser = Core.Models.Browser;
 
 namespace ConfigTestsProject.ConfigSettings
 {

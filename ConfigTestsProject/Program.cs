@@ -1,5 +1,5 @@
-﻿using ConfigTestsProject.ConfigSettings;
-using ConfigTestsProject.Models;
+﻿using System.Configuration;
+using System.Reflection;
 
 namespace ConfigTestsProject
 {
@@ -7,19 +7,21 @@ namespace ConfigTestsProject
     {
         public static void Main(string[] args)
         {
-            IRepository reader = new XmlProvider();
-            Config config = reader.GetConfig();
+            var xmlKey = ConfigurationManager.AppSettings.Get("XmlReflection");
+            var jsonKey = ConfigurationManager.AppSettings.Get("JsonReflection");
+            
+            var assembly1 = Assembly.LoadFrom(@"C:\Projects\CourseProjects\XmlReflection\bin\Debug\XmlReflection.dll");
+            var assembly2 = Assembly.LoadFrom(@"C:\Projects\CourseProjects\JsonReflection\bin\Debug\JsonReflection.dll");
 
-            IRepository writer = new JsonProvider();
-            writer.WriteConfig(config);
-            
-            ConfigHelper configHelper = new ConfigHelper();
-            JsonProvider jsonProvider = new JsonProvider();
-            
-            var incorrectBrowsers = configHelper.GetBrowsersWithIncorrectConfiguration(config.Browsers);
+            dynamic xmlProvider = assembly1.CreateInstance(xmlKey);
+            dynamic jsonProvider = assembly2.CreateInstance(jsonKey);
+
+            var config = xmlProvider.GetConfig();
+            xmlProvider.WriteConfig(config);
             
             jsonProvider.SetBrowsersConfigurationInJson(config.Browsers);
-            jsonProvider.GetBrowsersWithConfiguration();
+            var configFromJson = jsonProvider.GetConfig();
+            jsonProvider.WriteConfig(configFromJson);
         }
     }
 }

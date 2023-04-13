@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace ConfigTestsProject.Models
+namespace Core.Models
 {
     public class TestData
     {
