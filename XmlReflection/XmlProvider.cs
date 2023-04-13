@@ -2,9 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using ConfigTestsProject.Models;
+using Core.Interfaces;
+using XmlReflection.XmlModels;
 
-namespace ConfigTestsProject.ConfigSettings
+namespace XmlReflection
 {
     public class XmlProvider : IRepository
     {
@@ -12,20 +13,22 @@ namespace ConfigTestsProject.ConfigSettings
 
         public XmlProvider()
         {
-            XDocument = XDocument.Load(PathHelper.GetPathToXmlFile());
+            XDocument = XDocument.Load(XmlPathHelper.GetPathToXmlFile());
         }
+        
+        public Core.Models.Config GetConfig() => GetConfigFromXmlToConfig(GetXmlConfig());
 
-        public Config GetConfig() => new Config() { Browsers = GetBrowsersWithConfiguration() };
-
-        public void WriteConfig(Config config)
+        public void WriteConfig(Core.Models.Config config)
         {
             foreach (var item in config.Browsers)
             {
                 Console.WriteLine(item.ToString());
             }
         }
+        
+        public Config GetXmlConfig() => new Config() { Browsers = GetBrowsersWithConfiguration() };
 
-        public List<Browser> GetBrowsersName()
+        public List<Browser> GetBrowsers()
         {
             var browserList = (from xml in XDocument.Element("config")?.Elements("browser")
                 select new Browser()
@@ -38,8 +41,8 @@ namespace ConfigTestsProject.ConfigSettings
 
         public List<Browser> GetBrowsersWithConfiguration()
         {
-            var browsersList = GetBrowsersName();
-
+            var browsersList = GetBrowsers();
+            
             foreach (var browser in browsersList)
             {
                 var users = GetUsers(browser.Name);
@@ -75,6 +78,29 @@ namespace ConfigTestsProject.ConfigSettings
                 {
                     Test = xml?.Value
                 }).ToList();
+        }
+        
+        private Core.Models.Config GetConfigFromXmlToConfig(Config xmlConfig)
+        {
+            var config = new Core.Models.Config();
+
+            config.Browsers = (from xml in xmlConfig.Browsers
+                select new Core.Models.Browser()
+                {
+                    Name = xml.Name,
+                    Users = xml.Users.Select(x => new Core.Models.User()
+                    {
+                        Role = x.Role,
+                        Password = x.Password,
+                        Login = x.Login,
+                        Tests = x.Tests.Select(t => new Core.Models.TestData()
+                        {
+                            Test = t.Test
+                        }).ToList()
+                    }).ToList()
+                }).ToList();
+            
+            return config;
         }
     }
 }
