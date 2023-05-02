@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonReflection", "JsonRefle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{9594E9C9-22F0-4DA9-A286-3E16A24A09D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseProject", "DataBaseProject\DataBaseProject.csproj", "{495164A0-8A97-485E-85E4-CE7EB416FB95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{9594E9C9-22F0-4DA9-A286-3E16A24A09D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9594E9C9-22F0-4DA9-A286-3E16A24A09D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9594E9C9-22F0-4DA9-A286-3E16A24A09D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{495164A0-8A97-485E-85E4-CE7EB416FB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495164A0-8A97-485E-85E4-CE7EB416FB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495164A0-8A97-485E-85E4-CE7EB416FB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495164A0-8A97-485E-85E4-CE7EB416FB95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
